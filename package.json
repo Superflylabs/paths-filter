@@ -2,7 +2,7 @@
   "name": "paths-filter",
   "version": "1.0.0",
   "engines": {
-    "node": ">= 20"
+    "node": ">=26.13.0 <27"
   },
   "private": true,
   "description": "Execute your workflow steps only if relevant files are modified.",

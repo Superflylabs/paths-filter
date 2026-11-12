@@ -15,9 +15,11 @@ don't allow this because they don't work on a level of individual jobs or steps.
 
 ## Development
 
-Use Node.js 26.13.0 (`nvm use`) and npm for local builds and tests. CI uses the same
-version. The published action continues to run on GitHub's `node20` action runtime,
-so its TypeScript target and Node.js API types remain compatible with that runtime.
+The action executes with the GitHub runner’s embedded Node.js 24 runtime (`runs.using: node24`). Its patch version is supplied by GitHub Actions; adopting this change requires consumers to update their action ref and confirm a patched runner.
+
+Use Node.js 26.13.1 (`nvm use`) and npm for local builds and tests. CI uses the same
+version. The bundled action is also smoke-tested with the patched Node.js 24 release;
+GitHub-hosted execution must confirm the runner supplies that patch or a later one.
 
 ## Supported workflows
 
